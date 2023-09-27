@@ -2,6 +2,15 @@ pipeline {
     agent any
 
     stages {
+        stage('Initialization') {
+            steps {
+                script {
+                    echo "Initializing..."
+                    def libraryContent = "@Library('security-library') _"
+                    echo libraryContent
+                }
+            }
+        }
         stage('PRE-BUILD') {
             steps {
                 script {
