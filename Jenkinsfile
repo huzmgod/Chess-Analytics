@@ -9,26 +9,7 @@ pipeline {
             }
         }
 
-        stage('POST-BUILD') {
-            steps {
-                script {
-                    echo "Post-Build Stage"
-                    def postBuildContent = "secPostBuild()"
-                    echo postBuildContent
-                }
-            }
-        }
-
-        stage('PRE-DEPLOY') {
-            steps {
-                script {
-                    echo "Pre-Deploy Stage"
-                    def preDeployContent = "secPreDeploy()"
-                    echo preDeployContent
-                }
-            }
-        }
-
+       
         stage('DEPLOY') {
             steps {
                 echo "Deploying..."
