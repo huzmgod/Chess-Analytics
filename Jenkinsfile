@@ -20,7 +20,6 @@ pipeline {
             steps {
                 script {
                     echo "Post-Deploy Stage"
-                    def postDeployContent = "secPostDeploy()"
                     echo postDeployContent
                 }
             }
