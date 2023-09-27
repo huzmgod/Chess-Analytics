@@ -6,7 +6,6 @@ pipeline {
             steps {
                 script {
                     echo "Pre-Build Stage"
-                    def preBuildContent = "secPreBuild()"
                     echo preBuildContent
                 }
             }
@@ -22,7 +21,6 @@ pipeline {
             steps {
                 script {
                     echo "Post-Build Stage"
-                    def postBuildContent = "secPostBuild()"
                     echo postBuildContent
                 }
             }
@@ -32,7 +30,6 @@ pipeline {
             steps {
                 script {
                     echo "Pre-Deploy Stage"
-                    def preDeployContent = "secPreDeploy()"
                     echo preDeployContent
                 }
             }
@@ -48,7 +45,6 @@ pipeline {
             steps {
                 script {
                     echo "Post-Deploy Stage"
-                    def postDeployContent = "secPostDeploy()"
                     echo postDeployContent
                 }
             }
